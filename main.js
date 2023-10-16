@@ -6,7 +6,9 @@ const containerCards = document.querySelector(".container-cards");
 //   .then((response) => response.json())
 //   .then((data) => data);
 
-const persSimpsonsAPI = fetch("https://apisimpsons.fly.dev/api/personajes")
+const persSimpsonsAPI = fetch(
+  "https://apisimpsons.fly.dev/api/personajes?limit=20&page=1"
+)
   .then((response) => response.json())
   .then((data) => {
     data.docs.forEach((personaje) => {
@@ -20,6 +22,7 @@ const persSimpsonsAPI = fetch("https://apisimpsons.fly.dev/api/personajes")
         )
       );
     });
+
     return data;
   });
 
