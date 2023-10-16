@@ -27,13 +27,15 @@ const persSimpsonsAPI = fetch(
   });
 
 const templateCardPersonaje = function (img, nombre, historia, id) {
-  return `<div class="pt-4 col-lg-4 col-md-6 col-sm-12">
+  return `<div class="pt-5 col-lg-4 col-md-6 col-sm-12">
                                 <div class="card text-center">
-                                  <img
-                                    src="${img}"
-                                    class="card-img-top"
-                                    alt="..."
-                                  />
+                                  <div>
+                                    <img
+                                      src="${img}"
+                                      class="card-img-top img-prop mt-4"
+                                      alt="..."
+                                    />
+                                  </div>                                  
                                   <div class="card-body">
                                     <h2 class="card-title">${nombre}</h2>
                                     <p class="card-description">${historia}</p>
